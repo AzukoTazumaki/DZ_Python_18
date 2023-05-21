@@ -188,10 +188,6 @@ body {
 
 /* ————————————————————————————————————————————————— BLOCK EXERCISE_1 ————————————————————————————————————————————————— */
 
-.exercise_1 {
-    backdrop-filter: brightness(.7);
-}
-
 .text_exercise_1,
 .form_ex_1 {
     background-color: var(--block-background-transparent);
@@ -205,7 +201,7 @@ body {
     background-color: var(--block-background);
 }
 
-.items_ex_1 li {
+.items_ex_1 li, .items_ex_2 li {
     list-style-type: square;
 }
 
@@ -251,7 +247,7 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgb(70, 70, 70)'/%3e%3c/svg%3e");
 }
 
-.submit {
+.submit, .button_to_main_page {
     border-radius: 5px;
     background-color: var(--text-color-light);
     color: var(--text-color-dark);
@@ -260,21 +256,23 @@ body {
     transition: .3s;
 }
 
-.submit:hover {
+.submit:hover, .button_to_main_page:hover {
     background-color: rgb(188, 140, 88);
 }
 
 .table-scroll-body {
-    height: 288px;
+    height: 40vh;
     overflow-x: auto;
     margin-top: 0px;
     border-bottom: 1px solid var(--text-color-light);
 }
+
 .table-scroll table {
     width:100%;
     table-layout: fixed;
     border: none;
 }
+
 .table-scroll thead th {
     font-weight: bold;
     text-align: left;
@@ -286,6 +284,7 @@ body {
     border-left: 1px solid var(--text-color-light);
     border-right: 1px solid var(--text-color-light);
 }
+
 .table-scroll tbody td {
     text-align: left;
     border-left: 1px solid var(--text-color-light);
@@ -294,9 +293,53 @@ body {
     font-size: 14px;
     vertical-align: top;
 }
+
 .table-scroll tbody tr:nth-child(even){
     background: #797979;
 }
+
 .table-scroll tbody tr:nth-child(odd){
     background: #4b4b4b;
+}
+
+.amount_of_books {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--text-color-dark);
+    text-shadow: var(--text-shadow-light);
+}
+
+/* —————————————————————————————————————————————————— ERRORS —————————————————————————————————————————————————— */
+
+.page_not_found {
+    text-shadow: var(--text-shadow-light);
+}
+
+.page_not_found button {
+    border-radius: 5px;
+    background-color: var(--text-color-light);
+    color: var(--text-color-dark);
+    border: none;
+    padding: 5px 20px;
+    transition: .3s;
+}
+
+.page_not_found button:hover {
+    background-color: rgb(188, 140, 88);
+}
+
+.page_not_found {
+    backdrop-filter: grayscale(.5);
+    animation: page_not_found_page 2s;
+}
+
+@keyframes page_not_found_page {
+    from {
+        opacity: 0;
+        backdrop-filter: none;
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: grayscale(.5);
+    }
 }

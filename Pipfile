@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 flask = "*"
 faker = "*"
+requests = "*"
+bs4 = "*"
 
 [dev-packages]
 

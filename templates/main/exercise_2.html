@@ -1,0 +1,50 @@
+{% block exercise_2 %}
+<div class="container-fluid exercise_1">
+    <div class="row d-flex align-items-center vh-100">
+        <div class="offset-2 col-4">
+            <div class="text_exercise_1">
+                <h3>Задание 2.</h3>
+                <p>
+                    Написать программу «книги». Создать два списка
+                    годы выпуска. Реализовать меню для пользователя:
+                <ul class="items_ex_2">
+                    <li>Отсортировать по названию книг;</li>
+                    <li>Отсортировать по годам выпуска;</li>
+                    <li>Вывести список книг с названиями и годами выпуска;</li>
+                    <li>Выход.</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="form_ex_1">
+                <p>
+                    Я решил найти какой-нибудь сайт с книгами и спарсить его. Получилось.
+                    Там около 20 книг, но тоже ничего. Правда, пока все спарсится, нужно
+                    подождать немного. Примечание: сортировка производится только
+                    по возрастанию.
+                </p>
+                <p>Выберите вид сортировки:</p>
+                <form action="/ex_2" method="post">
+                    <div class="d-flex flex-column ">
+                        <label class="custom-radio">
+                            <input type="radio" name="sort_ex_2" value="sort_by_title_of_book">
+                            <span>Сортировка по названию книги</span>
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="sort_ex_2" value="sort_by_author_of_book">
+                            <span>Сортировка по автору</span>
+                        </label>
+                        <label class="custom-radio">
+                            <input type="radio" name="sort_ex_2" value="sort_by_year_of_book">
+                            <span>Сортировка по году выпуска</span>
+                        </label>
+                    </div>
+                    <button class="submit mt-3" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

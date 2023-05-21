@@ -1,16 +1,18 @@
 {% extends 'main/base.html' %}
 
-{% block exercise_1_answer %}
+{% block exercise_2_answer %}
 <div class="container">
     <div class="row d-flex align-items-center vh-100">
-        <div class="offset-3 col-6">
+        <div class="col-12">
+            <h4 class="amount_of_books text-center">Количество книг: {{ sort[1] }}</h4>
             <div class="table-scroll">
                 <table>
                     <thead>
                         <tr>
-                            <th>Имя</th>
-                            <th>Фамилия</th>
-                            <th>Номер телефона</th>
+                            <th width="200">Название</th>
+                            <th width="200">Автор</th>
+                            <th width="200">Год выпуска</th>
+                            <th>Краткое содержание</th>
                         </tr>
                     </thead>
                 </table>
@@ -18,11 +20,12 @@
                 <div class="table-scroll-body content">
                     <table>
                         <tbody>
-                            {% for human in sort: %}
-                            <tr >
-                                <td>{{ human['first_name'] }}</td>
-                                <td>{{ human['last_name'] }}</td>
-                                <td>{{ human['phone_number'] }}</td>
+                            {% for book in sort[0]: %}
+                            <tr>
+                                <td width="200">{{ book['title'] }}</td>
+                                <td width="200">{{ book['author'] }}</td>
+                                <td width="200">{{ book['year'] }}</td>
+                                <td>{{ book['summary'] }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
