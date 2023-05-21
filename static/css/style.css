@@ -263,3 +263,40 @@ body {
 .submit:hover {
     background-color: rgb(188, 140, 88);
 }
+
+.table-scroll-body {
+    height: 288px;
+    overflow-x: auto;
+    margin-top: 0px;
+    border-bottom: 1px solid var(--text-color-light);
+}
+.table-scroll table {
+    width:100%;
+    table-layout: fixed;
+    border: none;
+}
+.table-scroll thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: var(--text-color-light);
+    color: var(--text-color-dark);
+    font-size: 14px;
+    border-left: 1px solid var(--text-color-light);
+    border-right: 1px solid var(--text-color-light);
+}
+.table-scroll tbody td {
+    text-align: left;
+    border-left: 1px solid var(--text-color-light);
+    border-right: 1px solid var(--text-color-light);
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+.table-scroll tbody tr:nth-child(even){
+    background: #797979;
+}
+.table-scroll tbody tr:nth-child(odd){
+    background: #4b4b4b;
+}

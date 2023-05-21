@@ -18,30 +18,45 @@
     {% block content %}
     {% endblock %}
 
-    <script 
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script 
-        src="{{url_for('static', filename='node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    {% block exercise_1_answer %}
+    {% endblock %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
-        src="{{url_for('static', filename='js/main.js')}}"></script>
-    <script 
-        src="https://kit.fontawesome.com/fb866d52e1.js" crossorigin="anonymous"></script>
+        src="{{url_for('static', filename='node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    <script src="https://kit.fontawesome.com/fb866d52e1.js" crossorigin="anonymous"></script>
     <script>
         (function ($) {
             $(window).on("load", function () {
                 $('body').mCustomScrollbar({
                     theme: "inset-3-dark",
                     autoHideScrollbar: true,
-                    mouseWheel:{ 
+                    mouseWheel: {
                         deltaFactor: 8,
                         normalizeDelta: false
                     },
-                    scrollButtons:{ 
+                    scrollButtons: {
                         enable: true
                     }
                 });
             });
-        })(jQuery)
+        })(jQuery);
+
+        $(".table-scroll-body").mCustomScrollbar({
+            theme: "rounded",
+            scrollbarPosition: "outside",
+            autoHideScrollbar: true,
+            scrollInertia: 1000,
+            mouseWheel: {
+                deltaFactor: 3,
+                normalizeDelta: false,
+                scrollAmount: 5
+            },
+            scrollButtons: {
+                enable: true
+            }
+        });
     </script>
 </body>
 

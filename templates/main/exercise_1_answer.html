@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+
+{% block exercise_1_answer %}
+<div class="container">
+    <div class="row d-flex align-items-center vh-100">
+        <div class="offset-3 col-6">
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Имя</th>
+                            <th>Фамилия</th>
+                            <th>Номер телефона</th>
+                        </tr>
+                    </thead>
+                </table>
+
+                <div class="table-scroll-body content">
+                    <table>
+                        <tbody>
+                            {% for i in sort: %}
+                            <tr >
+                                <td>{{ i['first_name'] }}</td>
+                                <td>{{ i['last_name'] }}</td>
+                                <td>{{ i['phone_number'] }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
