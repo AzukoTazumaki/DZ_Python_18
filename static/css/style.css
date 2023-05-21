@@ -1,0 +1,33 @@
+/* ————————————————————————————————————————————————— DEFAULT SETTINGS ————————————————————————————————————————————————— */
+
+@font-face {
+    font-family: 'Unbounded';
+    src: url(../static/fonts/Unbounded-Light.ttf);
+}
+
+:root {
+    --font-family: 'Unbounded';
+    --text-color-light: rgb(219, 102, 102);
+    --text-color-dark: rgb(49, 49, 49);
+    --text-shadow-light:
+        1px 1px 6px var(--text-color-light),
+        2px 2px 2px var(--text-color-dark);
+    --text-shadow-dark: 1px 1px 2px var(--text-color-dark);
+    --box-shadow-light:
+        3px 3px 40px var(--text-color-light),
+        -3px -3px 40px var(--text-color-light);
+    --box-shadow-dark:
+        3px 3px 10px var(--text-color-dark),
+        -3px -3px 10px var(--text-color-dark);
+    --block-background: var(--text-color-dark);
+    --block-background-transparent: rgba(70, 70, 70, .7);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--block-background);
+    color: var(--text-color-light);
+}
