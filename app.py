@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+from faker import Faker
 
 app = Flask(__name__)
 

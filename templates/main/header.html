@@ -1,13 +1,11 @@
 {% block header %}
 <header>
     <nav class="navbar navbar-expand fixed-top">
-        <div class="container d-flex justify-content-between">
+        <div class="container d-flex justify-content-between navbar_container">
             <a href="/" class="navbar-brand">
-                <img src="{{url_for('static', filename='images/logo.svg')}}" width="190" alt="Azuko">
+                <img src="{{url_for('static', filename='images/logo.svg')}}" width="160" alt="Azuko">
             </a>
-            <a href="https://github.com/AzukoTazumaki">
-                <i class="fa-brands fa-github"></i>
-            </a>
+            <a id="github_link" href="https://github.com/AzukoTazumaki"><i class="fa-brands fa-github fa-xl"></i> GitHub</a>
         </div>
     </nav>
 </header>
